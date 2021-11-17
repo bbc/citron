@@ -127,3 +127,10 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# Eclipse
+.project
+.pydevproject
+
+# Misc
+.DS_Store

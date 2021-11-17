@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Citron API</title>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href='//fonts.googleapis.com/css?family=Damion' rel='stylesheet' type='text/css'>
+    <style>
+      body {
+        padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+      }
+    </style>
+    <script src="//code.jquery.com/jquery-latest.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready( function () {
+          $('#quotes-form').submit(function () {
+            $('#quotes-results').replaceWith(
+                  '<div id="quotes-results">' +
+                  '<table class="table">' +
+                  '<thead><tr><th>Source</th><th>Coreference</th><th>Cue</th><th>Content</th></thead>' +
+                  '<tbody id="quotes-table-body">' +
+                  '</tbody>' +
+                  '</table>' +
+                  '</div>'
+            );
+            var form_data = $("#quotes-form").serialize();
+            $.post('/quotes/', form_data, function(data, text_status) {
+              $.each(data.quotes, function (i, result) {
+          
+                var sources = [];
+                for (var i=0; i < result['sources'].length; i++) {
+                   sources.push(result['sources'][i]['text']);
+                }
+                
+                var contents = [];
+                for (var i=0; i < result['contents'].length; i++) {
+                   contents.push(result['contents'][i]['text']);
+                }
+                
+                var coreferences = []
+                for (var i=0; i < result['coreferences'].length; i++) {
+                    coreferences.push(result['coreferences'][i]['text']);
+                }
+
+                $('#quotes-table-body').append(
+                  '<tr class="types"><td>' + sources.join(', ') + '</td><td>' + coreferences.join(', ') + '</td><td>' + result.cue.text + '</td><td>' + contents.join(', ') + '</td></tr>'
+                );
+                });
+              }, "json");
+              return false;
+          });
+      });
+    </script>
+  </head>
+  <body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="brand" href="#">Citron API</a>
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li class="active"><a href="#">Home</a></li>
+              <li><a href="#examples">Examples</a></li>
+              <li><a href="#feedback">Contact</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <h1>Citron API</h1>
+      <p>
+        This REST API extracts quotes from text.
+      </p>
+      <p>
+        If the source is an abbreviated name or pronoun it finds the primary coreference.
+      </p>
+      <p>
+        The API returns a JSON response containing the source, coreference, verb-cue and content spans. Each span
+        provides the text and together with the start and end character indices. 
+      </p>
+      <p>
+        The API accepts the following requests, where [text] is the text to process.
+        <ul>
+          <li><span class="label">GET</span> <a href="/quotes?text=">/quotes?text=</a>[text]</li>
+        </ul>
+      </p>
+      <h2 id="examples">Example</h2>
+      <form id="quotes-form" name="form" class="form-horizontal" action="/quotes/" method="post">
+        <label for="form-text">Paste text and submit:</label>
+        <textarea id="form-text" name="text" rows="10" style="width: 60%"></textarea></br>
+        <button type="submit" class="btn" style="margin: 10px">Submit</button>
+      </form>
+      <div id="quotes-results"></div>
+      <h2 id="feedback">Feedback</h2>
+      <p>
+        Report issues to: <a href="https://github.com/bbc/citron/issues">https://github.com/bbc/citron/issues</a>
+      </p>
+    </div>
+  </body>
+</html>
