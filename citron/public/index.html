@@ -66,8 +66,8 @@
           <div class="nav-collapse collapse">
             <ul class="nav">
               <li class="active"><a href="#">Home</a></li>
-              <li><a href="#examples">Examples</a></li>
-              <li><a href="#feedback">Contact</a></li>
+              <li><a href="#demonstration">Demonstration</a></li>
+              <li><a href="#feedback">Feedback</a></li>
             </ul>
           </div><!--/.nav-collapse -->
         </div>
@@ -80,12 +80,12 @@
         This REST API extracts quotes from text.
       </p>
       <p>
-        The API returns a JSON response containing the quote&apos;s source, cue and content spans.
+        The API returns a JSON response containing the quote&#39;s source, cue and content spans.
         If the source is an abbreviated name or pronoun it also finds the primary coreference.
       </p>
       <p>
         Note that there can be a significant number of errors and omissions. Extracted quotes should 
-        always be checked against the input text.
+        be checked against the input text.
       </p>
       <p>
         The API accepts the following requests, where [text] is the text to process.
@@ -93,7 +93,7 @@
           <li><span class="label">GET</span> <a href="/quotes?text=">/quotes?text=</a>[text]</li>
         </ul>
       </p>
-      <h2 id="examples">Example</h2>
+      <h2 id="demonstration">Demonstration</h2>
       <form id="quotes-form" name="form" class="form-horizontal" action="/quotes/" method="post">
         <label for="form-text">Paste text and submit:</label>
         <textarea id="form-text" name="text" rows="10" style="width: 60%"></textarea></br>
