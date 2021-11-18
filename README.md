@@ -1,3 +1,5 @@
+<img src="./citron/public/img/citron_logo.png" alt="Citron logo" align="right">
+
 # Citron #
 
 Citron is an experimental quote extraction and attribution system created by [BBC R&D](https://www.bbc.co.uk/rd), based on a [paper](https://aclanthology.org/D13-1101/) and a [dataset](https://aclanthology.org/L16-1619/) developed by the School of Informatics at the University of Edinburgh.

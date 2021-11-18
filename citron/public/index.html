@@ -73,17 +73,19 @@
         </div>
       </div>
     </div>
-    <div class="container">
+    <div class="container" style="width: 780px" >
+      <img src="./img/citron_logo.png" alt="Citron logo" style="float:right">
       <h1>Citron API</h1>
       <p>
         This REST API extracts quotes from text.
       </p>
       <p>
-        If the source is an abbreviated name or pronoun it finds the primary coreference.
+        The API returns a JSON response containing the quote&apos;s source, cue and content spans.
+        If the source is an abbreviated name or pronoun it also finds the primary coreference.
       </p>
       <p>
-        The API returns a JSON response containing the source, coreference, verb-cue and content spans. Each span
-        provides the text and together with the start and end character indices. 
+        Note that there can be a significant number of errors and omissions. Extracted quotes should 
+        always be checked against the input text.
       </p>
       <p>
         The API accepts the following requests, where [text] is the text to process.
