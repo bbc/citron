@@ -4,7 +4,7 @@
 
 Citron is an experimental quote extraction and attribution system created by [BBC R&D](https://www.bbc.co.uk/rd), based on a [paper](https://aclanthology.org/D13-1101/) and a [dataset](https://aclanthology.org/L16-1619/) developed by the School of Informatics at the University of Edinburgh.
 
-It can be used to extract quotes from text documents, attributing them to the appropriate speaker and resolving pronouns where necessary. Note that there can be a significant number of errors and omissions. Extracted quotes should be checked against the input text.
+It can be used to extract quotes from text documents, attributing them to the appropriate speaker and resolving pronouns where necessary. It supports direct and indirect quotes (with and without quotation marks respectively) and mixed quotes (which have direct and indirect parts). Note that there can be a significant number of errors and omissions. Extracted quotes should be checked against the input text.
 
 You can run Citron using the [pre-trained model](./models/en_2021-11-15) or [train your own model](./scripts/train). You can also [evaluate its performance](./scripts/evaluate).
 
