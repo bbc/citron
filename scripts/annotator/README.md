@@ -1,17 +1,16 @@
-Citron Annotator
-================
+<img src="../../citron/public/img/citron_logo.png" alt="Citron logo" align="right">
+
+# Citron Annotator #
 
 Citron Annotator is a GUI programme that can be used to create Citron format annotation data for text files.
 
-Running
--------
+## Running ##
         
     $ export PYTHONPATH=$PYTHONPATH:/path/to/citron
     
     $ python3 citron_annotator.py <input directory> <output directory> [<citron model directory>]
 
-User Guide
-----------
+## User Guide ##
 
 Click **Open File** and select a text file.
 - If a matching annotation file exists in the output directory then the existing annotations will be loaded.

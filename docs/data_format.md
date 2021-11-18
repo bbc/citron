@@ -1,3 +1,5 @@
+<img src="../citron/public/img/citron_logo.png" alt="Citron logo" align="right">
+
 # Citron Annotation Format #
 
 Citron uses a JSON data format for training and evaluation purposes. Each file represents one document and contains an object with the following properties:

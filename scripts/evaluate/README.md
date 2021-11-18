@@ -1,3 +1,5 @@
+<img src="../../citron/public/img/citron_logo.png" alt="Citron logo" align="right">
+
 # Citron Evaluate #
 
 **citron_evaluate.py** can be used to evaluate the Citron quote extraction system, using data in [Citron's Annotation Format](../../docs/data_format.md).

@@ -1,8 +1,10 @@
+<img src="./citron/public/img/citron_logo.png" alt="Citron logo" align="right">
+
 # Contributing to Citron
 
 ## Questions
 
-Questions can be raised on the [discussion board](https://github.com/bbc/citron/discussions/categories/q-a).
+Questions about Citron can be raised on the [discussion board](https://github.com/bbc/citron/discussions/categories/q-a).
 
 ## Reporting bugs
 
@@ -10,7 +12,7 @@ Please report bugs on the: [issue tracker](https://github.com/bbc/citron/issues)
 
 ## Feature suggestions
 
-Please suggest new features on the [discussion board](https://github.com/bbc/citron/discussions/categories/ideas) describing the intended usage.
+Please contribute ideas on the [discussion board](https://github.com/bbc/citron/discussions/categories/ideas) describing the intended usage.
 
 ## Contributing code
 

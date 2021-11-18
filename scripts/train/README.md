@@ -1,3 +1,5 @@
+<img src="../../citron/public/img/citron_logo.png" alt="Citron logo" align="right">
+
 # Training Citron Models #
 
 Each component in Citron has a script which can be used to train and/or evaluate its associated model. 

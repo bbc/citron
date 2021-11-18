@@ -1,3 +1,5 @@
+<img src="../../citron/public/img/citron_logo.png" alt="Citron logo" align="right">
+
 # Preprocessing PARC 3.0 #
 
 Training models for Citron requires data in [Citron's Annotation Format](../../docs/data_format.md). This can be extracted from PARC 3.0 and PDTB v2.0 using the following scripts.

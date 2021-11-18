@@ -1,3 +1,5 @@
+<img src="../../citron/public/img/citron_logo.png" alt="Citron logo" align="right">
+
 # en_2021-11-15 #
 
 This English language model was trained using the **train** and **dev** partitions of PARC 3.0. The evaluation results below where obtained using the **test** partition. 
