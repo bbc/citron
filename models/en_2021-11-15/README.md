@@ -2,11 +2,11 @@
 
 # en_2021-11-15 #
 
-This English language model was trained using the **train** and **dev** partitions of PARC 3.0. The evaluation results below where obtained using the **test** partition. It includes data extracted from [VerbNet](https://verbs.colorado.edu/verbnet)
+This English language model was trained using the **train** and **dev** partitions of PARC 3.0. The evaluation results below where obtained using the **test** partition. It includes data extracted from [VerbNet](https://verbs.colorado.edu/verbnet).
 
 ## Licence ##
 
-Licensed under the Creative Commons [Attribution-NonCommercial-ShareAlike 4.0 International licence](./CC_BY-NC-SA_4.0.txt) and the [VerbNet 3.0 license](../../verbnet-license.3.0.txt).
+Licensed under the Creative Commons [Attribution-NonCommercial-ShareAlike 4.0 International licence](./CC_BY-NC-SA_4.0.txt) and the [VerbNet 3.0 license](./verbnet-license.3.0.txt).
 
 ## Evaluation Results ##
 
