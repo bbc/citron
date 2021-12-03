@@ -2,7 +2,7 @@
 
 # en_2021-11-15 #
 
-This English language model was trained using the **train** and **dev** partitions of PARC 3.0. The evaluation results below where obtained using the **test** partition. 
+This English language model was trained using the **train** and **dev** partitions of PARC 3.0. The evaluation results below where obtained using the **test** partition. It includes data extracted from [VerbNet](https://verbs.colorado.edu/verbnet)
 
 ## Licence ##
 
