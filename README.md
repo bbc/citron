@@ -73,7 +73,7 @@ Contributions would be welcome. Please refer to the [contributing guidelines](./
 
 Licensed under the [Apache License, Version 2.0](./LICENSE).
 
-The [pre-trained model](./models/en_2021-11-15) is separately licensed under the Creative Commons [Attribution-NonCommercial-ShareAlike 4.0 International licence](./CC_BY-NC-SA_4.0.txt) and the [VerbNet 3.0 license](./verbnet-license.3.0.txt).
+The [pre-trained model](./models/en_2021-11-15) is separately licensed under the Creative Commons [Attribution-NonCommercial-ShareAlike 4.0 International licence](./models/en_2021-11-15/CC_BY-NC-SA_4.0.txt) and the [VerbNet 3.0 license](./verbnet-license.3.0.txt).
 
 ## Contact ##
 
