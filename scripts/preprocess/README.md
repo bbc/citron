@@ -2,9 +2,9 @@
 
 # Preprocessing PARC 3.0 #
 
-Training models for Citron requires data in [Citron's Annotation Format](../../docs/data_format.md). This can be extracted from PARC 3.0 and PDTB v2.0 using the following scripts.
+Training models for Citron requires data in [Citron's Annotation Format](../../docs/data_format.md). Suitable data can be extracted from PARC 3.0 and PDTB v2.0 using the following scripts.
 
-To retrain the Coreference Resolver it is also necessary to obtain coreference information from the CoNLL-2011 Shared Task dataset.
+To retrain the Coreference Resolver suitable data can also be extracted from the CoNLL-2011 Shared Task dataset.
 
 ## Usage ##
 
@@ -19,7 +19,7 @@ All scripts share the following parameters:
 
 ### conll_extractor.py ###
 
-This is an optional script to extract coreference information from CoNLL-2011 (required to train CoreferenceResolver).
+This is an optional script to extract coreference information from CoNLL-2011.
 
     --pdtb-path        Path to: pdtb_v2/data/raw/wsj
     --conll-path       Path to conll-2011

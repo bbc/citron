@@ -751,8 +751,8 @@ class CoreferenceTable():
         # Get all names in the document
         names = self.get_names(doc, forenames_table, quotes, content_labels)
         
-        # Table which maps mentions to their primary (longest, earliest) coreference
-        self.coreference_table = self._build_name_table(names)
+        # Dict which maps mentions to their primary (longest, earliest) coreference
+        self.coreference_map = self._build_name_table(names)
         
         # Combine names and pronouns to create a list of mentions
         for token in doc:
@@ -778,7 +778,7 @@ class CoreferenceTable():
         """
         
         mention_span_tuple = (mention.start, mention.end) 
-        self.coreference_table[mention_span_tuple] = root_mention
+        self.coreference_map[mention_span_tuple] = root_mention
     
     
     def contains(self, mention):
@@ -794,7 +794,7 @@ class CoreferenceTable():
         """
         
         mention_span_tuple = (mention.start, mention.end)
-        return mention_span_tuple in self.coreference_table
+        return mention_span_tuple in self.coreference_map
     
     
     def resolve(self, mention):
@@ -828,8 +828,8 @@ class CoreferenceTable():
         
         entity_tuple = (start, end)
         
-        if entity_tuple in self.coreference_table:
-            return self.coreference_table[entity_tuple]
+        if entity_tuple in self.coreference_map:
+            return self.coreference_map[entity_tuple]
         
         else:
             return None

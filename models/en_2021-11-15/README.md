@@ -4,6 +4,10 @@
 
 This English language model was trained using the **train** and **dev** partitions of PARC 3.0. The evaluation results below where obtained using the **test** partition. 
 
+## Licence ##
+
+Licensed under the Creative Commons [Attribution-NonCommercial-ShareAlike 4.0 International licence](./CC_BY-NC-SA_4.0.txt) and the [VerbNet 3.0 license](../../verbnet-license.3.0.txt).
+
 ## Evaluation Results ##
 
 ### citron_evaluate.py ###
@@ -123,9 +127,5 @@ This English language model was trained using the **train** and **dev** partitio
 | Precision       | 86.4% |
 | Recall          | 97.4% |
 | F1:             | 91.6% |
-
-## Licence ##
-
-Licensed under the [Apache License, Version 2.0](../../LICENSE) and the [VerbNet 3.0 license](../../verbnet-license.3.0.txt).
 
 Copyright 2021 British Broadcasting Corporation.
