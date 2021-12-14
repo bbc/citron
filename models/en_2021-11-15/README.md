@@ -2,15 +2,56 @@
 
 # en_2021-11-15 #
 
-This English language model was trained using the **train** and **dev** partitions of PARC 3.0. The evaluation results below where obtained using the **test** partition. It includes data extracted from [VerbNet](https://verbs.colorado.edu/verbnet).
+##  Model Details ##
+
+This is an English language model for the [Citron Quote Extraction and Attribution System](https://github.com/bbc/citron) produced by [BBC R&D](https://www.bbc.co.uk/rd). 
+
+| Parameter     |                  |     
+|---------------|------------------|
+| Language      | English          |
+| Creation date | 15 November 2021 |
+
+For technical details see: ["Quote Extraction and Analysis for News"](https://github.com/bbc/citron/docs/DSJM_2018_paper_1.pdf). For more information please contact: [chris.newell@bbc.co.uk](mailto:chris.newell@bbc.co.uk).
 
 ## Licence ##
 
 Licensed under the Creative Commons [Attribution-NonCommercial-ShareAlike 4.0 International licence](./CC_BY-NC-SA_4.0.txt) and the [VerbNet 3.0 license](./verbnet-license.3.0.txt).
 
-## Evaluation Results ##
+## Intended Use ##
 
-### citron_evaluate.py ###
+This is an experimental model intended for research and evaluation.
+
+## Factors ##
+
+The training data is based on text extracts from the Wall Street Journal, an American business-focused, English-language international daily newspaper based in New York City. It may not perform as well with text from other domains.
+
+## Metrics ##
+
+The performance of the model is reported in the Quantitative Analysis below using [Exact Match and Overlap Match metrics](https://github.com/bbc/citron/tree/main/scripts/evaluate) for text spans.
+
+## Training and Evaluation Data ##
+
+The model was trained using the **train** and **dev** partitions of the [PARC 3.0 Corpus of Attribution Relations](https://aclanthology.org/L16-1619/). It also includes data extracted from [VerbNet 3.3](https://verbs.colorado.edu/verbnet).
+
+The Quantitative Analysis shown below was obtained using the **test** partition of the [PARC 3.0 Corpus of Attribution Relations](https://aclanthology.org/L16-1619/).
+
+The Coreference Resolver was trained and evaluated using equivalent partitions of the [CoNLL-2011 Shared Task dataset](https://conll.cemantix.org/2011/data.html) which covers a subset of the data in PARC 3.0.
+
+PARC 3.0 and CoNLL-2011 are extensions of the [Penn Discourse Treebank](https://catalog.ldc.upenn.edu/LDC2008T05) and [Ontonotes](https://catalog.ldc.upenn.edu/LDC2013T19) corpora. These corpora are available under license from the [Linguistic Data Consortium](https://www.ldc.upenn.edu/).
+
+## Ethical Considerations ##
+
+Citron was developed under the [BBC's Machine Learning Engineering Principles](https://www.bbc.co.uk/rd/publications/responsible-ai-at-the-bbc-our-machine-learning-engine-principles) which comprises of six guiding principles and a self-audit checklist.
+
+## Caveats and Recommendations ##
+
+The performance of this model is reasonably good but there is a significant error rate. Extracted quotes should always be checked against the original text to confirm the accuracy of the text spans and correctness of the attribution.
+
+## Quantitative Analysis ##
+
+### Overall Performance ###
+
+The overall performance of Citron using this model was measured using the [Citron Evaluate](https://github.com/bbc/citron/tree/main/scripts/evaluate) script. 
 
 #### Cue Span ####
 
@@ -68,7 +109,11 @@ Licensed under the Creative Commons [Attribution-NonCommercial-ShareAlike 4.0 In
 | Recall          | 93.8% |
 | F1              | 83.2% |
 
-### cue_classifier_builder.py ###
+### Performance of the Individual Components ###
+
+The performance of the individual components of Citron using this model was measured using the [build scripts](https://github.com/bbc/citron/tree/main/scripts/train).
+
+#### Cue Classifier ####
 
 | Metric          | Score |
 |-----------------|-------|
@@ -76,7 +121,7 @@ Licensed under the Creative Commons [Attribution-NonCommercial-ShareAlike 4.0 In
 | Recall          | 72.9% |
 | F1:             | 82.7% |
 
-### source_classifier_builder.py ###
+#### Source Classifier ####
 
 | Exact Metric    | Score |
 |-----------------|-------|
@@ -90,7 +135,7 @@ Licensed under the Creative Commons [Attribution-NonCommercial-ShareAlike 4.0 In
 | Recall          | 93.1% |
 | F1:             | 91.1% |
 
-### source_resolver_builder.py ###
+#### Source Resolver ####
 
 | Metric         |  Score |
 |----------------|--------|
@@ -98,7 +143,7 @@ Licensed under the Creative Commons [Attribution-NonCommercial-ShareAlike 4.0 In
 | Recall         |  99.6% |
 | F1:            |  99.8% |
 
-### content_classifier_builder.py ###
+#### Content Classifier ####
 
 | Exact Metric    | Score |
 |-----------------|-------|
@@ -112,7 +157,7 @@ Licensed under the Creative Commons [Attribution-NonCommercial-ShareAlike 4.0 In
 | Recall          | 90.7% |
 | F1:             | 90.3% |
 
-### content_resolver_builder.py ###
+#### Content Resolver ####
 
 | Metric          | Score |
 |-----------------|-------|
@@ -120,12 +165,16 @@ Licensed under the Creative Commons [Attribution-NonCommercial-ShareAlike 4.0 In
 | Recall          | 93.6% |
 | F1:             | 96.5% |
 
-### coreference_resolver_builder.py ###
+#### Coreference Resolver ####
 
 | Metric          | Score |
 |-----------------|-------|
 | Precision       | 86.4% |
 | Recall          | 97.4% |
 | F1:             | 91.6% |
+
+## References ##
+
+This document is adapted from ["Model Cards for Model Reporting", M. Mitchell et Al, 2018](https://arxiv.org/abs/1810.03993)
 
 Copyright 2021 British Broadcasting Corporation.
